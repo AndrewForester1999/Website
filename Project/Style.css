@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: #CBE9F4;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+br{
+    display:none
+}
+
+.container{
+    max-width: 1600px;
+    width: 100%;
+    max-height: 1200px;
+    height: 950px;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    position:relative;
+
+}
+
+.content {
+    position:absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+    height: 500px; /*requires explicit height*/
+    width: 1000px;
+}
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+.content form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+form .input-box span.details{
+    display: block;
+    font-size: 23px;
+    margin-bottom: 5px;
+    font-weight: bold;
+
+}
+.user-details .input-box input{
+    height: 55px;
+    width: 100%;
+    outline: 1px solid black;
+    font-size: 16px;
+    padding-left: 15px;
+}
+
+input:placeholder-shown {
+    font-style: italic;
+}
+
+select{
+    height: 45px;
+    width: 45%;
+    outline: 1px solid black;
+    font-size: 16px;
+    padding-left: 15px;
+    font-style: italic;
+    background-image: url("images/arrows.jpg");
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 12%;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+    border: solid 1px black;
+}
+
+.gender{
+    font-size: 12px;
+}
+
+
+form .gender-details .gender-title{
+    font-size: 10px;
+    font-weight: 400;
+}
+form .category{
+    display: flex;
+    width: 80%;
+    margin: 14px 0 ;
+    justify-content: space-between;
+}
+form .category label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+form .category label .square{
+    height: 18px;
+    width: 23px;
+    margin-right: 10px;
+    background: white;
+    border: 1px solid black;
+    transition: all 0.3s ease;
+}
+#square-1:checked ~ .category label .one
+{
+    background: #2096f3;
+    border-color: #d9d9d9;
+}
+form input[type="radio"]{
+    display: none;
+}
+form .button{
+    height: 45px;
+    margin: 35px 0
+}
+form .button input{
+    height: 60px;
+    width: 15%;
+    border-radius: 10px;
+    border-style: none;
+    font-size: 16px;
+    background: #2096f3;
+    color: white;
+    font-weight: bold;
+    box-shadow: 3px 3px 3px #e1e1e1;
+
+}
+form .button input:hover{
+    /* transform: scale(0.99); */
+    background: #20cbf3;
+}
+@media(max-width: 584px){
+    .container{
+        max-width: 100%;
+    }
+    form .user-details .input-box{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    form .category{
+        width: 100%;
+    }
+    .content form .user-details{
+        max-height: 300px;
+
+    }
+    .user-details::-webkit-scrollbar{
+        width: 5px;
+    }
+}
+@media(max-width: 600px){
+    .user-details .input-box input{
+        margin-left: 10px;
+        flex-direction: column;
+        height: 55px;
+        width: 30%;
+        font-size: 16px;
+        padding-left: 15px;
+
+    }
+    select{
+        margin-left: 10px;
+        height: 45px;
+        width: 30%;
+        outline: 1px solid black;
+        font-size: 16px;
+        padding-left: 15px;
+        font-style: italic;
+        background-image: url("images/arrows.jpg");
+        -moz-appearance:none; /* Firefox */
+        -webkit-appearance:none; /* Safari and Chrome */
+        appearance:none;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 12%;
+    }
+    form .button input{
+        margin-left: 10px;
+        height: 60px;
+        width: 15%;
+        border-radius: 10px;
+        border-style: none;
+        font-size: 16px;
+        background: #2096f3;
+        color: white;
+        font-weight: bold;
+        box-shadow: 3px 3px 3px #e1e1e1;
+        margin-top: -70px;
+
+    }
+
+    .details{
+        margin-left: 10px;
+    }
+
+    .gender {
+        margin-top: 200px;
+        padding-top: 50px;
+    }
+
+    .square-one{
+        margin-top: 100px;
+        width: 20px;
+        height: 20px;
+    }
+
+    br{
+        display: unset;
+    }
+
+    .container {
+        max-height: 1300px;
+    }
+
+}
+
+
